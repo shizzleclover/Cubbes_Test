@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:cubbes/Service/countryApi.dart';
 import 'package:flutter/material.dart';
 
@@ -30,8 +32,8 @@ class _CountryUIState extends State<CountryUI> {
                     child: CircularProgressIndicator(),
                   );
                 } else if (snapshot.hasError) {
-  print(snapshot.error); // Logs the error in the console
-  return Center(child: Text('Error: ${snapshot.error}'));
+                     print(snapshot.error); // Logs the error in the console
+                    return Center(child: Text('Error: ${snapshot.error}'));
 }
  else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                   return const Center(child: Text('No Countries Found'));
