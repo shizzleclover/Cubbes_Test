@@ -1,10 +1,10 @@
-import 'dart:convert';
-import 'package:code_test/model/country.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+ import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:cubbes/model/country.dart';
+ 
 
 class Countryapi {
-  static String apiUrl = dotenv.env['API_URL'] ?? '';
+  static String apiUrl = 'https://restcountries.com/v3.1/all';
 
   Future<List<Country>> fetchCountries() async {
     final response = await http.get(Uri.parse(apiUrl));
