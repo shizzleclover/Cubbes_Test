@@ -6,6 +6,7 @@ import 'package:cubbes/model/country.dart';
 
 class Countryapi {
   static String apiUrl = 'https://restcountries.com/v3.1/all';
+  
 
   Future<List<Country>> fetchCountries() async {
     final response = await http.get(Uri.parse(apiUrl));
